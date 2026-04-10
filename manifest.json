@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Time Tracker",
+  "version": "1.0",
+  "description": "Tracks the total time you spend in the browser each day.",
+  "permissions": [
+    "storage",
+    "alarms",
+    "downloads",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Time Tracker"
+  }
+}

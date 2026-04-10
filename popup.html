@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome Time Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Time Tracker</h1>
+            <p class="subtitle">Time spent in browser today</p>
+        </header>
+
+        <div class="timer-wrapper">
+            <div class="glow-ring"></div>
+            <div class="timer-display">
+                <span id="hours">00</span><span class="colon">:</span><span id="minutes">00</span><span class="colon">:</span><span id="seconds">00</span>
+            </div>
+        </div>
+
+        <div class="stats-row">
+            <div class="stat">
+                <span class="stat-label">Session</span>
+                <span class="stat-value" id="session-time">0m</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Status</span>
+                <span class="stat-value active"><span class="dot"></span>Tracking</span>
+            </div>
+        </div>
+
+        <div class="action-grid">
+            <button id="pause-btn" class="glow-button secondary">Pause</button>
+            <button id="stop-btn" class="glow-button secondary stop-style">Stop</button>
+            <button id="screenshot-btn" class="glow-button secondary">Screenshot</button>
+            <button id="download-btn" class="glow-button">Report</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
